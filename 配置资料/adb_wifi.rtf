@@ -1,0 +1,52 @@
+{\rtf1\ansi\ansicpg936\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgray\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \'c8\'e7\'ba\'ce\'c8\'c3androidStudio\'cd\'a8\'b9\'fd\'be\'d6\'d3\'f2\'cd\'f8\'b5\'f7\'ca\'d4\'d5\'e6\'bb\'fa\
+\
+1.\'cf\'c8\'cd\'a8\'b9\'fdusb\'ca\'fd\'be\'dd\'cf\'c8\'c1\'ac\'bd\'d3\'b5\'e7\'c4\'d4,(\'bf\'aa\'b7\'a2\'d5\'df\'c4\'a3\'ca\'bd\'a1\'a2usb\'b5\'f7\'ca\'d4\'b4\'f2\'bf\'aa)\
+2.\'b4\'f2\'bf\'aa\'d6\'d5\'b6\'cb\'a3\'ac\'ca\'e4\'c8\'ebadb devices \'b2\'e9\'bf\'b4\'b5\'b1\'c7\'b0\'c1\'ac\'bd\'d3\'b5\'c4\'c9\'e8\'b1\'b8\'a3\'acadd get-state \'bb\'f1\'c8\'a1\'c9\'e8\'b1\'b8\'b5\'c4\'c1\'ac\'bd\'d3\'d7\'b4\'cc\'ac\'a3\'a8device,offline,unknown)\
+3.\'d2\'c0\'b4\'ce\'ca\'e4\'c8\'ebadb kill-server \'ba\'cd adb start-server\
+4.\'d4\'d9\'d4\'da\'d6\'d5\'b6\'cb\'ca\'e4\'c8\'eb adb tcpip +\'b6\'cb\'bf\'da\'ba\'c5(\'bb\'f2\'d5\'df\'d6\'b1\'bd\'d3\'ca\'e4\'c8\'eb \'b6\'cb\'bf\'da\'ba\'c5)\
+5.\'b6\'cf\'bf\'aausb\'c1\'ac\'bd\'d3\'a3\'ac\'d4\'da\'d6\'d5\'b6\'cb\'ca\'e4\'c8\'eb\'d5\'e6\'bb\'fa\'b5\'c4mac\'b5\'d8\'d6\'b7+\'b6\'cb\'bf\'da\'ba\'c5(\'c8\'e7 adb connect 172.29.20.10\'a3\'ba5037)\
+\
+adb -s **** (\'c9\'e8\'b1\'b8id) install -r(\'ca\'c7\'b7\'f1\'d6\'d8\'d0\'c2\'b0\'b2\'d7\'b0) aa.apk\
+adb -s **** (\'c9\'e8\'b1\'b8id) uninstall -k(\'ca\'c7\'b7\'f1\'b1\'a3\'b4\'e6\'bb\'ba\'b3\'e5\'c4\'bf\'c2\'bc) aa.apk\
+\
+adb\'b2\'e9\'bf\'b4\'c6\'c1\'c4\'bb\'b7\'d6\'b1\'e6\'c2\'ca\
+adb shell wm size\
+add shell dumpsys window windows\
+\
+\'bb\'f1\'c8\'a1\'c9\'e8\'b1\'b8\'d0\'c5\'cf\'a2 adb shell getprop\
+\'bb\'f1\'c8\'a1cpu\'d0\'c5\'cf\'a2 adb shell getprop ro.product.cpu.abi\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf0 \CocoaLigature0 192.168.1.103:5505	device\
+192.168.1.116:5507	device\
+192.168.1.118:5506	device\
+\
+--------------\
+startup.sh\
+shutdown.sh\
+--------------\
+control+l
+\f0 \'c7\'e5\'c6\'c1
+\f1 \
+control+c
+\f0 \'cd\'a3\'d6\'b9\
+\cf2 \cb3 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf2 sudo killall -STOP -c usbd  usb
+\f0 \'b6\'cf\'bf\'aa\'c1\'ac\'bd\'d3\'b2\'bb\'ce\'c8\'b6\'a8\
+\
+sudo sh ./startup.sh \'c6\'f4\'b6\'aftomcat\
+sh ./shutdown.sh  \'b9\'d8\'b1\'d5tomcat\
+\
+
+\f1 \
+}
